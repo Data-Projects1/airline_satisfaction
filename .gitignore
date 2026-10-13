@@ -1,0 +1,17 @@
+# Dados (o train.csv é grande, não vá para o git)
+dataset/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# Editor / sistema
+.vscode/
+.idea/
+.DS_Store
