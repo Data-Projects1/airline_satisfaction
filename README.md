@@ -14,7 +14,7 @@ train.csv - conjunto de treinamento, com a satisfação como alvo
 test.csv - conjunto de teste, utilizado para prever a probabilidade de satisfação
 sample_submission.csv - arquivo de submissão de exemplo no formato correto
 
-[Kaggle]([https://www.kaggle.com/competitions/rossmann-store-sales/data])
+[Kaggle](https://www.kaggle.com/competitions/rossmann-store-sales/data)
 
 #### Campos de Dados
 
