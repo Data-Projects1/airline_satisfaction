@@ -10,9 +10,9 @@ O resultado deve fazer a previsão da probabilidade para a variável de satisfa�
 
 #### Base de Dados
 
-<br>train.csv - conjunto de treinamento, com a satisfação como alvo<br/>
-<br>test.csv - conjunto de teste, utilizado para prever a probabilidade de satisfação<br/>
-<br>sample_submission.csv - arquivo de submissão de exemplo no formato correto<br/>
+train.csv - conjunto de treinamento, com a satisfação como alvo<br/>
+test.csv - conjunto de teste, utilizado para prever a probabilidade de satisfação<br/>
+sample_submission.csv - arquivo de submissão de exemplo no formato correto<br/>
 
 [Kaggle](https://www.kaggle.com/competitions/playground-series-s6e10/data)
 
