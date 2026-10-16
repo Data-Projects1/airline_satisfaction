@@ -22,8 +22,8 @@ id - ID que representa uma pesquisa de satisfação do conjunto de teste.<br>
 Age - Idade do respondente.<br>
 Flight Distance - Distância do vôo.<br>
 Inflight wifi service - Satifação com o serviço de wifi disponibilidade.<br>
-Departure/Arrival time convenient - Satifação com horário de conveniência do parida e chegada.<br>
-Ease of Online booking - Satifação com facilidade de agendamento.<br>
+Departure/Arrival time convenient - Satifação com horário de conveniência do partida e chegada.<br>
+Ease of Online booking - Satifação com Facilidade de reserva online.<br>
 Gate location - Satifação com localização do portão de embarque.<br>
 Food and drink - Satifação com comida e bebida a bordo.<br>
 Online boarding - Satifação com serviço de check-in.<br>
@@ -31,7 +31,7 @@ Seat comfort - Satifação com conforto do asento.<br>
 Inflight entertainment - Satifação com entretenimento a bordo.<br>
 On-board service - Satifação com serviço a bordo.<br>
 Leg room service - Satifação com serviço de espaço para as pernas.<br>
-Baggage handling - Satifação com manuseio de bagagem.<br>
+Baggage handling - Satifação de serviço de manuseio de bagagem.<br>
 Checkin service - Satifação com serviço de check-in.<br>
 Cleanliness - Satifação com limpeza.<br>
 Departure Delay in Minutes - Atraso na partida em minutos.<br>
