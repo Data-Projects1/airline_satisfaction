@@ -40,7 +40,7 @@ sample_submission.csv - arquivo de submissão de exemplo no formato correto<br/>
 - Customer Type - Fidelização do repsondente.<br/>
 - Type of Travel - Tipo de viagem.<br/>
 - Class - Classe do vôo.<br/>
-- satisfaction - Resposta de satifação em VERDADEIRO ou FALSO.<br/>
+- satisfaction - Resposta de satisfação em VERDADEIRO ou FALSO.<br/>
 
 ### Premissa de Negócio
 
@@ -48,8 +48,28 @@ sample_submission.csv - arquivo de submissão de exemplo no formato correto<br/>
 
 O objetivo do projeto é prever a satisfação do cliente em relação à compania aérea.
 O modelo adotado busca prever a resposta de satisfação dos clientes que utilizaram os serviços da compania aérea.
+O formato de entrega contém informações de ID do passageiro respondente da pesquisa e a previsão de resposta de satisfação.
 
 #### Planejamento do Processo de Análise
+
+O processo de desenvolvimento do projeto teve como base o método CRSIP-DM, aplicando os seguintes passos:
+![Rossmann_Process](/img/processo.png "Processo CRISP")
+
+1. Questão do negócio:
+   Identificação e entendimento do problema de negócio. Idendificar a resposta de satisfação dos passageiros respondentes da pesquisa em relação ao serviço da compania aérea.
+
+2. Entendimento do negócio:
+   Entendimento do core business do negócio a fim de identificar a melhor estratégia de análise a ser implementada e foco na resolução do problema.
+
+3. Coleta de dados:
+   Seleção de dados disponibilizados em 3 bases em formato csv (train.csv, test.csv e sample_submission.csv) no site Kaggle. Predicting Airline Satisfaction. Disponível em: <https://www.kaggle.com/competitions/playground-series-s6e10/data>. Acesso em: 01 out. 2026.
+
+4. Limpeza de dados:
+   Foram realizadas limpeza e tratamento de formatação dos dados de acordo com padrões documentados; padronização do formato dos títulos das variáveis; formatação do tipos e grandezas dos campos de análise; inclusão de valor de minutos no conjunto de dados de atraso de chegada cujas pesquisas não apresentavam informações no campo "arrival_delay_in_minutes"; tratamento ou remoção de campos vazios e remoção de atributo “id” cuja dimensão é irrelevante para a análise atual.
+
+5. Exploração de dados:
+   A etapa de exploração de dados consistiu no levantamento das hipóteses e análise descritiva dos dados para visão do cenário inicial de informações, volume de dados e seleção de variáveis numéricas e categóricas para análise univariada.
+   Foi desenvolvido mapa mental de hipóteses para levantamento de trinte e uma hipóteses a serem validadas ou refutadas através da análise exploratória dos dados (EDA) nos campos do fenômeno analisado vendas: distância de voo, atraso de partida e atraso de chegada.
 
 #### Hipóteses:
 
