@@ -10,41 +10,44 @@ O resultado deve fazer a previsão da probabilidade para a variável de satisfa�
 
 #### Base de Dados
 
-train.csv - conjunto de treinamento, com a satisfação como alvo
-test.csv - conjunto de teste, utilizado para prever a probabilidade de satisfação
-sample_submission.csv - arquivo de submissão de exemplo no formato correto
+<br>train.csv - conjunto de treinamento, com a satisfação como alvo<br/>
+<br>test.csv - conjunto de teste, utilizado para prever a probabilidade de satisfação<br/>
+<br>sample_submission.csv - arquivo de submissão de exemplo no formato correto<br/>
 
-[Kaggle](https://www.kaggle.com/competitions/rossmann-store-sales/data)
+[Kaggle](https://www.kaggle.com/competitions/playground-series-s6e10/data)
 
 #### Campos de Dados
 
-id - ID que representa uma pesquisa de satisfação do conjunto de teste.<br>
-Age - Idade do respondente.<br>
-Flight Distance - Distância do vôo.<br>
-Inflight wifi service - Satifação com o serviço de wifi disponibilidade.<br>
-Departure/Arrival time convenient - Satifação com horário de conveniência do partida e chegada.<br>
-Ease of Online booking - Satifação com Facilidade de reserva online.<br>
-Gate location - Satifação com localização do portão de embarque.<br>
-Food and drink - Satifação com comida e bebida a bordo.<br>
-Online boarding - Satifação com serviço de check-in.<br>
-Seat comfort - Satifação com conforto do asento.<br>
-Inflight entertainment - Satifação com entretenimento a bordo.<br>
-On-board service - Satifação com serviço a bordo.<br>
-Leg room service - Satifação com serviço de espaço para as pernas.<br>
-Baggage handling - Satifação de serviço de manuseio de bagagem.<br>
-Checkin service - Satifação com serviço de check-in.<br>
-Cleanliness - Satifação com limpeza.<br>
-Departure Delay in Minutes - Atraso na partida em minutos.<br>
-Arrival Delay in Minutes - Atraso na chegada em minutos.<br>
-Gender - Gênero do resondente.<br>
-Customer Type - Fidelização do repsondente.<br>
-Type of Travel - Tipo de viagem.<br>
-Class - Classe do vôo.<br>
-satisfaction - Resposta de satifação em VERDADEIRO ou FALSO.<br>
+- id - ID que representa uma pesquisa de satisfação do conjunto de teste.<br/>
+- Age - Idade do respondente.<br/>
+- Flight Distance - Distância do vôo.<br/>
+- Inflight wifi service - Satifação com o serviço de wifi disponibilidade.<br/>
+- Departure/Arrival time convenient - Satifação com horário de conveniência do partida e chegada.<br/>
+- Ease of Online booking - Satifação com Facilidade de reserva online.<br/>
+- Gate location - Satifação com localização do portão de embarque.<br/>
+- Food and drink - Satifação com comida e bebida a bordo.<br/>
+- Online boarding - Satifação com serviço de check-in.<br/>
+- Seat comfort - Satifação com conforto do asento.<br/>
+- Inflight entertainment - Satifação com entretenimento a bordo.<br/>
+- On-board service - Satifação com serviço a bordo.<br/>
+- Leg room service - Satifação com serviço de espaço para as pernas.<br/>
+- Baggage handling - Satifação de serviço de manuseio de bagagem.<br/>
+- Checkin service - Satifação com serviço de check-in.<br/>
+- Cleanliness - Satifação com limpeza.<br/>
+- Departure Delay in Minutes - Atraso na partida em minutos.<br/>
+- Arrival Delay in Minutes - Atraso na chegada em minutos.<br/>
+- Gender - Gênero do resondente.<br/>
+- Customer Type - Fidelização do repsondente.<br/>
+- Type of Travel - Tipo de viagem.<br/>
+- Class - Classe do vôo.<br/>
+- satisfaction - Resposta de satifação em VERDADEIRO ou FALSO.<br/>
 
 ### Premissa de Negócio
 
 ### Estratégia de Solução
+
+O objetivo do projeto é prever a satisfação do cliente em relação à compania aérea.
+O modelo adotado busca prever a resposta de satisfação dos clientes que utilizaram os serviços da compania aérea.
 
 #### Planejamento do Processo de Análise
 
