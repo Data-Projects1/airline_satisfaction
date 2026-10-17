@@ -53,7 +53,7 @@ O formato de entrega contém informações de ID do passageiro respondente da pe
 #### Planejamento do Processo de Análise
 
 O processo de desenvolvimento do projeto teve como base o método CRSIP-DM, aplicando os seguintes passos:
-![Rossmann_Process](/img/processo.png "Processo CRISP")
+![CRISP_Process](/img/processo.png "Processo CRISP")
 
 1. Questão do negócio:
    Identificação e entendimento do problema de negócio. Idendificar a resposta de satisfação dos passageiros respondentes da pesquisa em relação ao serviço da compania aérea.
@@ -71,7 +71,30 @@ O processo de desenvolvimento do projeto teve como base o método CRSIP-DM, apli
    A etapa de exploração de dados consistiu no levantamento das hipóteses e análise descritiva dos dados para visão do cenário inicial de informações, volume de dados e seleção de variáveis numéricas e categóricas para análise univariada.
    Foi desenvolvido mapa mental de hipóteses para levantamento de trinte e uma hipóteses a serem validadas ou refutadas através da análise exploratória dos dados (EDA) nos campos do fenômeno analisado vendas: distância de voo, atraso de partida e atraso de chegada.
 
-#### Hipóteses:
+Elementos de mapa mental de hipóteses:
+
+- Fenômeno: campo a ser medido ou modelado (variável resposta = y);
+- Agentes: agentes que impactam seu fenômeno (variáveis independentes = x);
+- Atributos do agente: características dos atributos.
+
+Hipóteses são geradas por:
+
+- Surpresa: insight com hipóteses não analisadas;
+- Teste de crença: verificar se a contraposição da crença é validada ou não. Isto é, validação da hipótese nula (H₀) ou da hipótese alternativa (H₁).
+
+Das 22 hipóteses levantadas, 9 foram selecionadas para validação através de análises univariadas, bivariadas e multivariadas de variáveis numéricas e categóricas do conjunto.
+
+#### 9 Hipóteses:
+
+1.  O atraso na saída e chegada do vôo diminuem a satisfação do cliente.
+2.  A disponibilidade de vôos em horário conveniente de partida e chegada aumentam a satisfação do cliente.
+3.  Distâncias maiores de vôo diminuem a satisfação do cliente.
+4.  Quanto maior a satisfação com o serviço a bordo maior a satisfação do cliente.
+5.  Quanto maior a satisfação com o serviço de entretenimento a bordo maior a satisfação do cliente.
+6.  Quanto maior a satisfação com o serviço de espaço para as pernas maior a satisfação do cliente
+7.  A classe de viajante Eco está associado a menor nível de satisfação.
+8.  O cliente fidelizado tem maior nível de satisfação.
+9.  Viajantes a trabalho tem maior nível de satisfação.
 
 #### Top 3 Insights
 
