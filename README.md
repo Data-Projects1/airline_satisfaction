@@ -10,9 +10,9 @@ O resultado deve fazer a previsão da probabilidade para a variável de satisfa�
 
 #### Base de Dados
 
-train.csv - conjunto de treinamento, com a satisfação como alvo<br/>
-test.csv - conjunto de teste, utilizado para prever a probabilidade de satisfação<br/>
-sample_submission.csv - arquivo de submissão de exemplo no formato correto<br/>
+train.csv - conjunto de treinamento, com a satisfação como alvo.<br/>
+test.csv - conjunto de teste, utilizado para prever a probabilidade de satisfação.<br/>
+sample_submission.csv - arquivo de submissão de exemplo no formato correto.<br/>
 
 [Kaggle](https://www.kaggle.com/competitions/playground-series-s6e10/data)
 
@@ -27,17 +27,17 @@ sample_submission.csv - arquivo de submissão de exemplo no formato correto<br/>
 - Gate location - Satifação com localização do portão de embarque.<br/>
 - Food and drink - Satifação com comida e bebida a bordo.<br/>
 - Online boarding - Satifação com serviço de check-in.<br/>
-- Seat comfort - Satifação com conforto do asento.<br/>
+- Seat comfort - Satifação com conforto do assento.<br/>
 - Inflight entertainment - Satifação com entretenimento a bordo.<br/>
 - On-board service - Satifação com serviço a bordo.<br/>
 - Leg room service - Satifação com serviço de espaço para as pernas.<br/>
-- Baggage handling - Satifação de serviço de manuseio de bagagem.<br/>
+- Baggage handling - Satifação com serviço de manuseio de bagagem.<br/>
 - Checkin service - Satifação com serviço de check-in.<br/>
 - Cleanliness - Satifação com limpeza.<br/>
 - Departure Delay in Minutes - Atraso na partida em minutos.<br/>
 - Arrival Delay in Minutes - Atraso na chegada em minutos.<br/>
-- Gender - Gênero do resondente.<br/>
-- Customer Type - Fidelização do repsondente.<br/>
+- Gender - Gênero do respondente.<br/>
+- Customer Type - Fidelização do respondente.<br/>
 - Type of Travel - Tipo de viagem.<br/>
 - Class - Classe do vôo.<br/>
 - satisfaction - Resposta de satisfação em VERDADEIRO ou FALSO.<br/>
@@ -88,13 +88,13 @@ Das 22 hipóteses levantadas, 9 foram selecionadas para validação através de 
 
 #### 9 Hipóteses:
 
-1.  O atraso na saída e chegada do vôo diminuem a satisfação do cliente.
+1.  O atraso na saída ou na chegada do vôo diminuem a satisfação do cliente.
 2.  A disponibilidade de vôos em horário conveniente de partida e chegada aumentam a satisfação do cliente.
 3.  Distâncias maiores de vôo diminuem a satisfação do cliente.
 4.  Quanto maior a satisfação com o serviço a bordo maior a satisfação do cliente.
 5.  Quanto maior a satisfação com o serviço de entretenimento a bordo maior a satisfação do cliente.
 6.  Quanto maior a satisfação com o serviço de espaço para as pernas maior a satisfação do cliente
-7.  A classe de viajante Eco está associado a menor nível de satisfação.
+7.  A classe de viajante Eco tem menor nível de satisfação.
 8.  O cliente fidelizado tem maior nível de satisfação.
 9.  Viajantes a trabalho tem maior nível de satisfação.
 
