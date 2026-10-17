@@ -69,7 +69,9 @@ O processo de desenvolvimento do projeto teve como base o método CRSIP-DM, apli
 
 5. Exploração de dados:
    A etapa de exploração de dados consistiu no levantamento das hipóteses e análise descritiva dos dados para visão do cenário inicial de informações, volume de dados e seleção de variáveis numéricas e categóricas para análise univariada.
-   Foi desenvolvido mapa mental de hipóteses para levantamento de trinte e uma hipóteses a serem validadas ou refutadas através da análise exploratória dos dados (EDA) nos campos do fenômeno analisado vendas: distância de voo, atraso de partida e atraso de chegada.
+   Foi desenvolvido mapa mental de hipóteses para levantamento de trinte e uma hipóteses a serem validadas ou refutadas através da análise exploratória dos dados (EDA) nos campos do fenômeno analisado satisfação do cliente: serviços de conveniência, serviços a bordo e perfil do cliente.
+
+![mind_map](/img/client_satisfaction.png "Mind Map")
 
 Elementos de mapa mental de hipóteses:
 
