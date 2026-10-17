@@ -14,7 +14,7 @@ train.csv - conjunto de treinamento, com a satisfação como alvo.<br/>
 test.csv - conjunto de teste, utilizado para prever a probabilidade de satisfação.<br/>
 sample_submission.csv - arquivo de submissão de exemplo no formato correto.<br/>
 
-[Kaggle](https://www.kaggle.com/competitions/playground-series-s6e10/data)
+[Kaggle](https://www.kaggle.com/competitions/playground-series-s6e10/)
 
 #### Campos de Dados
 
@@ -93,7 +93,7 @@ Das 22 hipóteses levantadas, 9 foram selecionadas para validação através de 
 3.  Distâncias maiores de vôo diminuem a satisfação do cliente.
 4.  Quanto maior a satisfação com o serviço a bordo maior a satisfação do cliente.
 5.  Quanto maior a satisfação com o serviço de entretenimento a bordo maior a satisfação do cliente.
-6.  Quanto maior a satisfação com o serviço de espaço para as pernas maior a satisfação do cliente
+6.  Quanto maior a satisfação com o serviço de espaço para as pernas maior a satisfação do cliente.
 7.  A classe de viajante Eco tem menor nível de satisfação.
 8.  O cliente fidelizado tem maior nível de satisfação.
 9.  Viajantes a trabalho tem maior nível de satisfação.
