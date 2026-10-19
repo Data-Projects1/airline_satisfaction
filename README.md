@@ -84,9 +84,9 @@ Hipóteses são geradas por:
 - Surpresa: insight com hipóteses não analisadas;
 - Teste de crença: verificar se a contraposição da crença é validada ou não. Isto é, validação da hipótese nula (H₀) ou da hipótese alternativa (H₁).
 
-Das 22 hipóteses levantadas, 9 foram selecionadas para validação através de análises univariadas, bivariadas e multivariadas de variáveis numéricas e categóricas do conjunto.
+Das 22 hipóteses levantadas, 10 foram selecionadas para validação através de análises univariadas, bivariadas e multivariadas de variáveis numéricas e categóricas do conjunto.
 
-#### 9 Hipóteses:
+#### 10 Hipóteses:
 
 1.  O atraso na saída ou na chegada do vôo diminuem a satisfação do cliente.
 2.  A disponibilidade de vôos em horário conveniente de partida e chegada aumentam a satisfação do cliente.
