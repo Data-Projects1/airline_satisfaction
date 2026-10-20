@@ -86,7 +86,7 @@ Hipóteses são geradas por:
 
 Das 22 hipóteses levantadas, 11 foram selecionadas para validação através de análises univariadas, bivariadas e multivariadas de variáveis numéricas e categóricas do conjunto.
 
-#### 10 Hipóteses:
+#### 11 Hipóteses:
 
 1.  Facilidade de autoserviço online de agendamento aumenta o nível de satisfação do cliente.
 2.  O atraso na saída ou na chegada do vôo diminuem a satisfação do cliente.
