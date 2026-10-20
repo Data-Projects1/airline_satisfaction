@@ -84,20 +84,21 @@ Hipóteses são geradas por:
 - Surpresa: insight com hipóteses não analisadas;
 - Teste de crença: verificar se a contraposição da crença é validada ou não. Isto é, validação da hipótese nula (H₀) ou da hipótese alternativa (H₁).
 
-Das 22 hipóteses levantadas, 10 foram selecionadas para validação através de análises univariadas, bivariadas e multivariadas de variáveis numéricas e categóricas do conjunto.
+Das 22 hipóteses levantadas, 11 foram selecionadas para validação através de análises univariadas, bivariadas e multivariadas de variáveis numéricas e categóricas do conjunto.
 
 #### 10 Hipóteses:
 
-1.  O atraso na saída ou na chegada do vôo diminuem a satisfação do cliente.
-2.  A disponibilidade de vôos em horário conveniente de partida e chegada aumentam a satisfação do cliente.
+1.  Facilidade de autoserviço online de agendamento aumenta o nível de satisfação do cliente.
+2.  O atraso na saída ou na chegada do vôo diminuem a satisfação do cliente.
 3.  Distâncias maiores de vôo diminuem a satisfação do cliente.
 4.  Quanto maior a satisfação com o serviço a bordo maior a satisfação do cliente.
 5.  Quanto maior a satisfação com o serviço de wifi a bordo maior a satisfação do cliente.
 6.  Quanto maior a satisfação com o serviço de entretenimento a bordo maior a satisfação do cliente.
 7.  Quanto maior a satisfação com o conforto do assento maior a satisfação do cliente.
-8.  A classe de viajante Eco tem menor nível de satisfação.
-9.  O cliente fidelizado tem maior nível de satisfação.
-10. Viajantes a trabalho tem maior nível de satisfação.
+8.  Quanto maior a satisfação com o serviço de limpeza a bordo maior a satisfação do cliente.
+9.  A classe de viajante Eco tem menor nível de satisfação.
+10. O cliente fidelizado tem maior nível de satisfação.
+11. Viajantes a trabalho tem maior nível de satisfação.
 
 #### Top 3 Insights
 
