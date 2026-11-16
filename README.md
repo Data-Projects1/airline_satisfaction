@@ -102,9 +102,40 @@ Das 22 hipóteses levantadas, 11 foram selecionadas para validação através de
 
 #### Top 3 Insights
 
-### Modelo de Machile Learning
+H1 Facilidade de autoserviço online de agendamento aumenta o nível de satisfação do cliente.
+**VERDADEIRA** A facilidade de autoserviço online de agendamento aumenta o nível de satisfação do cliente.<br/>
+![hipótese1](/img/H1.png "Hipótese 1")<br/><br/>
+
+H5 Quanto maior a satisfação com o serviço de wifi a bordo maior a satisfação do cliente.
+**VERDADEIRA** Quanto maior a satisfação com serviço de wifi a bordo maior a satisfação do cliente.<br/>
+![hipótese5](/img/H5.png "Hipótese 5")<br/><br/>
+H11 Viajantes a trabalho tem maior nível de satisfação.
+**VERDADEIRA** Viajantas a trabalho tem maior nível de satisfação.<br/>
+![hipótese11](/img/H11.png "Hipótese 11")<br/><br/>
+
+### Modelo de Machine Learning
+
+A preparação dos dados numéricos consistiu em Rescaling para variáveis não Gaussianas, isto é, variáveis sem distribuição normal. Já para a transformação de variáveis categóricas em numéricas foram utilizados encodings mantendo a natureza do conjunto de dados para torná-las mensuráveis e One Hot Encoding para categorização binária (0,1) para cada variável resposta das categorias "gender", "customer_type", "type_of_travel", sendo 1 na label da variável a resposta positiva. Ordinal Encoding para categorização ordinal da categoria "class" de acordo com a graduação Eco=0, Eco Plus=1, Business=2.
+Para a seleção de variáveis relevantes no modelo, foi aplicado para variáveis numéricas o método de matriz de correlação e para as variáveis categóricas o método Cramer's V, que associa a correlação entre duas variáveis categóricas baseada no teste Qui-Quadrado.<br/>
+Matriz de Correlação - variáveis numéricas
+![matriz_correlacao](/img/matriz_correlacao.png "Matriz Correlação")<br/>
+
+Cramer's V - variáveis categóricas
+![cramers_v](/img/cramesv.png "Cramer's V")<br/>
+
+Ainda para seleção de variáveis relevantes para acurácia do modelo, foi aplicado o método Boruta. De acorod com os resultados sete variáveis independentes deveriam ser removidas da análise: "age", "arrival_delay_in_minutes", "departure_arrival_time_convenient", "departure_delay_in_minutes", "food_and_drink", "gate_location", "gender_Male".<br/>
 
 #### Single Performance
+
+A base de dados train.csv foi dividida em 80% treino e 20% validação, sendo treinado pela base treino e validado na base validação, de mesma estrutura porém com dados novos. Foram treinados quatro métodos de modelos: Logistic Regression, Random Forest Regressor, LightGBM, XGBoost Regressor. Sendo o Average Model (modelo de média) o modelo de referência para performance de comparação dos demais modelos.
+===== Validation Metrics ====
+| Model |Accuracy |F1 Score |precision |Recall |AUC |ROCAUC |
+| ----------------------- | ----------- | --------- | ----------- |--------- | ----------- |----------- |
+|Baseline Val |0.501240 0.471920 0.444914 0.502417 0.501359 0.501359
+|Logistic Regression Validation |0.877129 0.859273 0.873305 0.845685 0.873940 0.919212
+|Random Forest Validation |0.918222 0.907990 0.906307 0.909680 0.917355 0.954362
+|LightGBM Validation |0.921352 0.910966 0.914897 0.907070 0.919904 0.955761
+|XGBoost Validation |0.921938 0.911650 0.915374 0.907956 0.920520 0.956250
 
 #### Real Performance - Cross Validation
 
