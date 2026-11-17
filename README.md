@@ -131,7 +131,7 @@ A base de dados train.csv foi dividida em 80% treino e 20% validação, sendo tr
 
 - Métricas de Treino
 
-  | Model                          | Accuracy | F1 Score | precision | Recall   | AUC      | ROCAUC   |
+  | Model                          | Accuracy | F1 Score | precision | Recall   | AUC      | ROC AUC  |
   | ------------------------------ | -------- | -------- | --------- | -------- | -------- | -------- |
   | Baseline Val                   | 0.500059 | 0.470344 | 0.443668  | 0.500433 | 0.500097 | 0.500097 |
   | Logistic Regression Validation | 0.877515 | 0.859770 | 0.873452  | 0.846510 | 0.874371 | 0.920635 |
@@ -141,7 +141,7 @@ A base de dados train.csv foi dividida em 80% treino e 20% validação, sendo tr
 
 - Métricas de Validação
 
-  | Model                          | Accuracy | F1 Score | precision | Recall   | AUC      | ROCAUC   |
+  | Model                          | Accuracy | F1 Score | precision | Recall   | AUC      | ROC AUC  |
   | ------------------------------ | -------- | -------- | --------- | -------- | -------- | -------- |
   | Baseline Val                   | 0.501240 | 0.471920 | 0.444914  | 0.502417 | 0.501359 | 0.501359 |
   | Logistic Regression Validation | 0.877129 | 0.859273 | 0.873305  | 0.845685 | 0.873940 | 0.919212 |
@@ -150,6 +150,14 @@ A base de dados train.csv foi dividida em 80% treino e 20% validação, sendo tr
   | XGBoost Validation             | 0.921938 | 0.911650 | 0.915374  | 0.907956 | 0.920520 | 0.956250 |
 
 #### Real Performance - Cross Validation
+
+- Métricas de Cross Validation
+
+  | Model | ROC AUC | Log Loss | Brier | F1|
+  | LogReg | 0.9206 ± 0.0008 |0.3464 ± 0.0019 |0.0982 ± 0.0007 |0.8597 ± 0.0010|
+  | RandomForest | 0.9554 ± 0.0006 |0.2423 ± 0.0021 |0.0655 ± 0.0007 |0.9093 ± 0.0011|
+  | LightGBM | 0.9570 ± 0.0005 |0.2346 ± 0.0019 |0.0630 ± 0.0006 |0.9130 ± 0.0007|
+  | XGBoost | 0.9572 ± 0.0006 |0.2339 ± 0.0018 |0.0626 ± 0.0006 |0.9137 ± 0.0008|
 
 ### Machine Learning Performance
 
