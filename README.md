@@ -216,8 +216,6 @@ As estratégias para definição do conjunto valores de hiperparâmetros (Hyperp
   | ------------------------- | -------- | -------- | --------- | -------- | -------- | -------- |
   | XGBoost Optuna Train      | 0.927941 | 0.918412 | 0.922522  | 0.914340 | 0.926562 | 0.966036 |
   | XGBoost Optuna Validation | 0.922653 | 0.912314 | 0.917570  | 0.907118 | 0.921077 | 0.956935 |
-
-  <br/>
   - Cross-validation entre modelos
 
   | Model                          | Accuracy | F1 Score | precision | Recall   | AUC      | ROC AUC  |
