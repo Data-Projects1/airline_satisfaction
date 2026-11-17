@@ -127,15 +127,15 @@ Ainda para seleção de variáveis relevantes para acurácia do modelo, foi apli
 
 #### Single Performance
 
-A base de dados train.csv foi dividida em 80% treino e 20% validação, sendo treinado pela base treino e validado na base validação, de mesma estrutura porém com dados novos. Foram treinados quatro métodos de modelos: Logistic Regression, Random Forest Regressor, LightGBM, XGBoost Regressor. Sendo o Average Model (modelo de média) o modelo de referência para performance de comparação dos demais modelos.
-===== Validation Metrics ====
-| Model |Accuracy |F1 Score |precision |Recall |AUC |ROCAUC |
-| ----------------------- | ----------- | --------- | ----------- |--------- | ----------- |----------- |
-|Baseline Val |0.501240 0.471920 0.444914 0.502417 0.501359 0.501359
-|Logistic Regression Validation |0.877129 0.859273 0.873305 0.845685 0.873940 0.919212
-|Random Forest Validation |0.918222 0.907990 0.906307 0.909680 0.917355 0.954362
-|LightGBM Validation |0.921352 0.910966 0.914897 0.907070 0.919904 0.955761
-|XGBoost Validation |0.921938 0.911650 0.915374 0.907956 0.920520 0.956250
+A base de dados train.csv foi dividida em 80% treino e 20% validação, sendo treinado pela base treino e validado na base validação, de mesma estrutura porém com dados novos. Foram treinados quatro métodos de modelos: Logistic Regression, Random Forest Regressor, LightGBM, XGBoost Regressor. Sendo o Average Model (modelo de média) o modelo de referência para performance de comparação dos demais modelos. <br/>
+
+| Model                          | Accuracy | F1 Score | precision | Recall   | AUC      | ROCAUC   |
+| ------------------------------ | -------- | -------- | --------- | -------- | -------- | -------- |
+| Baseline Val                   | 0.501240 | 0.471920 | 0.444914  | 0.502417 | 0.501359 | 0.501359 |
+| Logistic Regression Validation | 0.877129 | 0.859273 | 0.873305  | 0.845685 | 0.873940 | 0.919212 |
+| Random Forest Validation       | 0.918222 | 0.907990 | 0.906307  | 0.909680 | 0.917355 | 0.954362 |
+| LightGBM Validation            | 0.921352 | 0.910966 | 0.914897  | 0.907070 | 0.919904 | 0.955761 |
+| XGBoost Validation             | 0.921938 | 0.911650 | 0.915374  | 0.907956 | 0.920520 | 0.956250 |
 
 #### Real Performance - Cross Validation
 
