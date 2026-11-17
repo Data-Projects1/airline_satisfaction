@@ -167,9 +167,9 @@ Após análise dos modelos com menores valores de erro, os modelos Light GBM e X
 
 #### Hyperparameter Fine Tuning
 
-- **Randomized Search**
+As estratégias para definição do conjunto valores de hiperparâmetros (Hyperparameter Fine Tuning) para maximizar o aprendizado do modelo XGBoots foram a Randomized Search, que testa combinações aleatórias no modelo de forma rápida e exige menor capacidade de processamento se comparado ao Grid Search e Bayesian Search, que aprende com os testes anteriores e escolhe as variáveis respostas de forma inteligente.
 
-  As estratégias para definição do conjunto valores de hiperparâmetros (Hyperparameter Fine Tuning) para maximizar o aprendizado do modelo XGBoots foram a Randomized Search, que testa combinações aleatórias no modelo de forma rápida e exige menor capacidade de processamento se comparado ao Grid Search e Bayesian Search, que aprende com os testes anteriores e escolhe as variáveis respostas de forma inteligente.
+- **Randomized Search**
 
   Para o processo de cross-validation dos dados de treinamento foram divididos em 3 partes em 20 combinações diferentes de hiperparâmetros. Totalizando 60 iterações no treinamento do modelo para identificação da melhor combinação de hiperparâmetros para cada parâmetro do modelo.
   O fine tuning para o Randomized Search divide a base em 600 árvores, sendo utilizados em cada árvore 85% das amostras, 70% das colunas disponíveis na base, máximo de 127 e mínimo de 50 folhas.
