@@ -167,9 +167,10 @@ Após análise dos modelos com menores valores de erro, os modelos Light GBM e X
 
 #### Hyperparameter Fine Tuning
 
-- Randomized Search
+- **Randomized Search**
 
-  A estratégia para definição do conjunto valores de hiperparâmetros (Hyperparameter Fine Tuning) para maximizar o aprendizado do modelo XGBoots foi a **Randomized Search**, que testa combinações aleatórias no modelo de forma rápida e exige menor capacidade de processamento se comparado ao Grid Search.
+  As estratégias para definição do conjunto valores de hiperparâmetros (Hyperparameter Fine Tuning) para maximizar o aprendizado do modelo XGBoots foram a Randomized Search, que testa combinações aleatórias no modelo de forma rápida e exige menor capacidade de processamento se comparado ao Grid Search e Bayesian Search, que aprende com os testes anteriores e escolhe as variáveis respostas de forma inteligente.
+
   Para o processo de cross-validation dos dados de treinamento foram divididos em 3 partes em 20 combinações diferentes de hiperparâmetros. Totalizando 60 iterações no treinamento do modelo para identificação da melhor combinação de hiperparâmetros para cada parâmetro do modelo.
   O fine tuning para o Randomized Search divide a base em 600 árvores, sendo utilizados em cada árvore 85% das amostras, 70% das colunas disponíveis na base, máximo de 127 e mínimo de 50 folhas.
 
@@ -186,11 +187,11 @@ Após análise dos modelos com menores valores de erro, os modelos Light GBM e X
 
   Resultado: RMSE = -0.23143427073955536
 
-  O resultado RMSE pela validação cruzada de aproximadamente 23.14% indica que o erro médio quadrático da raiz tem baixa capacidade de discriminação entre as classes na validação cruzada. A inversão de sinal é convenção da estratégia, devendo ser considerados valores maiores como melhores resultados.
+  O resultado RMSE pela validação cruzada de aproximadamente 23.14% indica que o erro médio quadrático da raiz tem baixa capacidade de discriminação entre as classes na validação cruzada. A inversão de sinal é convenção da estratégia, devendo ser considerados valores maiores como melhores resultados. <br/>
 
-- Bayesian Search
+- **Bayesian Search**
 
-  Também foi aplicada a estratégia **Bayesian Search** que aprende com os testes anteriores e escolhe as variáveis respostas de forma inteligente. Para essa análise foi utilizado o Optuna com base no algoritmo TPE (Tree-structured Parzen Estimator), que aprende com as tentativas anteriores e passa a sortear hiperparâmetros em regiões mais promissoras, em vez de sortear às cegas.
+  A análise Bayesian Search utilizaou o Optuna com base no algoritmo TPE (Tree-structured Parzen Estimator), que aprende com as tentativas anteriores e passa a sortear hiperparâmetros em regiões mais promissoras, em vez de sortear às cegas.
   O fine tuning para o Bayesian Search divide a base em 1139 árvores, com máximo de 10 níveis e número mínimo de 16 amostras por ramificação para controle de possível memorização de ruídos (overfitting), sendo utilizados em cada árvore 96.97% das amostras, 94.7% das colunas disponíveis na base.
 
   Os hiperparâmetros que apresentaram a melhor performance com Bayesian Search foram:
@@ -211,6 +212,8 @@ Após análise dos modelos com menores valores de erro, os modelos Light GBM e X
   O resultado de ROC AUC (CV) de 95.77% indica uma excelente capacidade de distinção entre as classes na validação cruzada.
 
 #### Performance do Modelo
+
+O resultado do modelo XGBoot Single Performance com os valores de Fine Tunning foi:
 
 ### Resultado de Negócios
 
