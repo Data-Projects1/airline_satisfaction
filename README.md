@@ -152,8 +152,8 @@ A base de dados train.csv foi dividida em 80% treino e 20% validação, sendo tr
 #### Real Performance - Cross Validation
 
 - Métricas de Cross Validation
-
-  | Model | ROC AUC | Log Loss | Brier | F1|
+  | Model | ROC AUC | Log Loss | Brier | F1 |
+  | ------------------------------ | -------- | -------- | --------- | -------- |
   | LogReg | 0.9206 ± 0.0008 |0.3464 ± 0.0019 |0.0982 ± 0.0007 |0.8597 ± 0.0010|
   | RandomForest | 0.9554 ± 0.0006 |0.2423 ± 0.0021 |0.0655 ± 0.0007 |0.9093 ± 0.0011|
   | LightGBM | 0.9570 ± 0.0005 |0.2346 ± 0.0019 |0.0630 ± 0.0006 |0.9130 ± 0.0007|
