@@ -151,7 +151,7 @@ A base de dados train.csv foi dividida em 80% treino e 20% validação, sendo tr
 
 #### Real Performance - Cross-Validation
 
-- Métricas de comparação entre modelos (Cross Validation)
+- Métricas de comparação entre modelos (Cross-Validation)
 
   | Model               | ROC AUC         | Log Loss        | Brier           | F1              |
   | ------------------- | --------------- | --------------- | --------------- | --------------- |
@@ -229,7 +229,7 @@ As estratégias para definição do conjunto valores de hiperparâmetros (Hyperp
 
 #### Performance do Modelo
 
-### Métricas de Treino e Validação
+##### Métricas de Treino e Validação
 
 | Model                   | Accuracy | F1 Score | precision | Recall   | AUC      | ROC AUC  |
 | ----------------------- | -------- | -------- | --------- | -------- | -------- | -------- |
@@ -241,7 +241,7 @@ Diferença de AUC (treino - validação): 0.0056
 O modelo classificou corretamente aproximadamente 92% dos passageiros na validação (accuracy), aproximadamente 91% de equilíbrio entre Precision e Recall (F1), considerando como positivo os passageitos positivos, o modelo acertou 92% dos verdadeiros, conseguiu identificar 90% dos passageiros pertencentes à classe de satisfação como positiva.
 Ao comparar o modelo de treino e de validação, é possível identificar baixa diferença de desempenho, aproximadamente 0.56%, indicando boa capacidade de generalização e ausência de sinais relevantes de memorização de ruídos (overfitting).
 
-### Comparação entre os modelos
+##### Comparação entre os modelos
 
 | Model                          | Accuracy | F1 Score | precision | Recall   | AUC      | ROC AUC  |
 | ------------------------------ | -------- | -------- | --------- | -------- | -------- | -------- |
