@@ -252,7 +252,7 @@ Ao comparar o modelo de treino e de validação, é possível identificar baixa 
 | Logistic Regression Validation | 0.877129 | 0.859273 | 0.873305  | 0.845685 | 0.873940 | 0.919212 |
 | Baseline Val                   | 0.498589 | 0.469470 | 0.442340  | 0.500145 | 0.498746 | 0.498746 |
 
-Matriz de Correlação - variáveis numéricas
+Resultados - Curvas ROC,Precisão/Recall e calibração
 ![resultados](/img/resultados.png "Resultados")<br/>
 
 ### Resultado de Negócios
