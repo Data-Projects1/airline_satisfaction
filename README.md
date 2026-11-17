@@ -185,9 +185,9 @@ As estratégias para definição do conjunto valores de hiperparâmetros (Hyperp
   | learning_rate     | 0.05  |
   | colsample_bytree  | 0.7   |
 
-  Resultado: RMSE = -0.23143427073955536
+  Resultado: LogLoss = -0.23143427073955536
 
-  O resultado RMSE pela validação cruzada de aproximadamente 23.14% indica que o erro médio quadrático da raiz tem baixa capacidade de discriminação entre as classes na validação cruzada. A inversão de sinal é convenção da estratégia, devendo ser considerados valores maiores como melhores resultados. <br/>
+  O resultado Log Loss pela validação cruzada de aproximadamente 23.14% indica que o modelo tem boa capacidade de discriminação entre as classes na validação cruzada. A inversão de sinal é convenção da estratégia, devendo ser considerados valores maiores como melhores resultados, logo quanto mais próximo a zero melhor é a capacidade de discriminação entre as classes. <br/>
 
 - **Bayesian Search**
 
@@ -252,7 +252,7 @@ Ao comparar o modelo de treino e de validação, é possível identificar baixa 
 | Logistic Regression Validation | 0.877129 | 0.859273 | 0.873305  | 0.845685 | 0.873940 | 0.919212 |
 | Baseline Val                   | 0.498589 | 0.469470 | 0.442340  | 0.500145 | 0.498746 | 0.498746 |
 
-Resultados - Curvas ROC,Precisão/Recall e calibração
+Resultados - Curvas ROC, Precisão/Recall e Calibração
 ![resultados](/img/resultados.png "Resultados")<br/>
 
 ### Resultado de Negócios
