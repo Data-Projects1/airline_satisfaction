@@ -171,8 +171,8 @@ As estratégias para definição do conjunto valores de hiperparâmetros (Hyperp
 
 - **Randomized Search**
 
-  Para o processo de cross-validation dos dados de treinamento foram divididos em 3 partes em 20 combinações diferentes de hiperparâmetros. Totalizando 60 iterações no treinamento do modelo para identificação da melhor combinação de hiperparâmetros para cada parâmetro do modelo.
-  O fine tuning para o Randomized Search divide a base em 600 árvores, sendo utilizados em cada árvore 85% das amostras, 70% das colunas disponíveis na base, máximo de 127 e mínimo de 50 folhas.
+  O processo de cross-validation dos dados de treinamento com Randomized Search dividiu os dados em 3 partes em 20 combinações diferentes de hiperparâmetros. Totalizando 60 iterações no treinamento do modelo para identificação da melhor combinação de hiperparâmetros para cada parâmetro do modelo.
+  O fine tuning para o Randomized Search divide a base em 600 árvores, sendo utilizados em cada árvore 85% das amostras, 70% das variáveis disponíveis na base, máximo de 127 e mínimo de 50 folhas.
 
   Os hiperparâmetros que apresentaram a melhor performance para aestratégia Randomized Search foram:
 
@@ -192,7 +192,7 @@ As estratégias para definição do conjunto valores de hiperparâmetros (Hyperp
 - **Bayesian Search**
 
   A análise Bayesian Search utilizaou o Optuna com base no algoritmo TPE (Tree-structured Parzen Estimator), que aprende com as tentativas anteriores e passa a sortear hiperparâmetros em regiões mais promissoras, em vez de sortear às cegas.
-  O fine tuning para o Bayesian Search divide a base em 1139 árvores, com máximo de 10 níveis e número mínimo de 16 amostras por ramificação para controle de possível memorização de ruídos (overfitting), sendo utilizados em cada árvore 96.97% das amostras, 94.7% das colunas disponíveis na base.
+  O fine tuning para o Bayesian Search divide a base em 1139 árvores, máximo de 10 níveis (cortes) com mínimo de 16 amostras por ramificação para controle de possível memorização de ruídos (overfitting), sendo utilizados em cada árvore aproximadamente 97% das amostras e 95% das variáveis disponíveis na base.
 
   Os hiperparâmetros que apresentaram a melhor performance com Bayesian Search foram:
 
@@ -210,10 +210,52 @@ As estratégias para definição do conjunto valores de hiperparâmetros (Hyperp
   Resultado: roc_auc (CV) = 0.9577
 
   O resultado de ROC AUC (CV) de 95.77% indica uma excelente capacidade de distinção entre as classes na validação cruzada.
+  - XGBoots Optuna Métricas de Treino e Validação
+
+  | Model                     | Accuracy | F1 Score | precision | Recall   | AUC      | ROC AUC  |
+  | ------------------------- | -------- | -------- | --------- | -------- | -------- | -------- |
+  | XGBoost Optuna Train      | 0.927941 | 0.918412 | 0.922522  | 0.914340 | 0.926562 | 0.966036 |
+  | XGBoost Optuna Validation | 0.922653 | 0.912314 | 0.917570  | 0.907118 | 0.921077 | 0.956935 |
+
+  <br/>
+  - Cross-validation entre modelos
+
+  | Model                          | Accuracy | F1 Score | precision | Recall   | AUC      | ROC AUC  |
+  | ------------------------------ | -------- | -------- | --------- | -------- | -------- | -------- |
+  | XGBoost Optuna Validation      | 0.922653 | 0.912314 | 0.917570  | 0.907118 | 0.921077 | 0.956935 |
+  | XGBoost Validation             | 0.921938 | 0.911650 | 0.915374  | 0.907956 | 0.920520 | 0.956250 |
+  | LightGBM Validation            | 0.921352 | 0.910966 | 0.914897  | 0.907070 | 0.919904 | 0.955761 |
+  | Random Forest Validation       | 0.918222 | 0.907990 | 0.906307  | 0.909680 | 0.917355 | 0.954362 |
+  | Logistic Regression Validation | 0.877129 | 0.859273 | 0.873305  | 0.845685 | 0.873940 | 0.919212 |
+  | Baseline Val                   | 0.498589 | 0.469470 | 0.442340  | 0.500145 | 0.498746 | 0.498746 |
 
 #### Performance do Modelo
 
-O resultado do modelo XGBoot Single Performance com os valores de Fine Tunning foi:
+### Métricas de Treino e Validação
+
+| Model                   | Accuracy | F1 Score | precision | Recall   | AUC      | ROC AUC  |
+| ----------------------- | -------- | -------- | --------- | -------- | -------- | -------- |
+| Modelo Final Train      | 0.926337 | 0.916040 | 0.926363  | 0.905946 | 0.924269 | 0.962373 |
+| Modelo Final Validation | 0.922938 | 0.912061 | 0.923486  | 0.900915 | 0.920705 | 0.956746 |
+
+Diferença de AUC (treino - validação): 0.0056
+
+O modelo classificou corretamente aproximadamente 92% dos passageiros na validação (accuracy), aproximadamente 91% de equilíbrio entre Precision e Recall (F1), considerando como positivo os passageitos positivos, o modelo acertou 92% dos verdadeiros, conseguiu identificar 90% dos passageiros pertencentes à classe de satisfação como positiva.
+Ao comparar o modelo de treino e de validação, é possível identificar baixa diferença de desempenho, aproximadamente 0.56%, indicando boa capacidade de generalização e ausência de sinais relevantes de memorização de ruídos (overfitting).
+
+### Comparação entre os modelos
+
+| Model                          | Accuracy | F1 Score | precision | Recall   | AUC      | ROC AUC  |
+| ------------------------------ | -------- | -------- | --------- | -------- | -------- | -------- |
+| Modelo Final Validation        | 0.922938 | 0.912061 | 0.923486  | 0.900915 | 0.920705 | 0.956746 |
+| XGBoost Validation             | 0.921938 | 0.911650 | 0.915374  | 0.907956 | 0.920520 | 0.956250 |
+| LightGBM Validation            | 0.921352 | 0.910966 | 0.914897  | 0.907070 | 0.919904 | 0.955761 |
+| Random Forest Validation       | 0.918222 | 0.907990 | 0.906307  | 0.909680 | 0.917355 | 0.954362 |
+| Logistic Regression Validation | 0.877129 | 0.859273 | 0.873305  | 0.845685 | 0.873940 | 0.919212 |
+| Baseline Val                   | 0.498589 | 0.469470 | 0.442340  | 0.500145 | 0.498746 | 0.498746 |
+
+Matriz de Correlação - variáveis numéricas
+![resultados](/img/resultados.png "Resultados")<br/>
 
 ### Resultado de Negócios
 
