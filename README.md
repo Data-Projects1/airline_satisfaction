@@ -1,4 +1,6 @@
-# Previsão da satisfação de companhias aéreas
+# Previsão de satisfação de clientes em companhias aérea
+
+![airlines](/img/airlines.jpg "Airlines")
 
 ## Análise curva ROC
 
@@ -236,10 +238,10 @@ As estratégias para definição do conjunto valores de hiperparâmetros (Hyperp
 | Modelo Final Train      | 0.926337 | 0.916040 | 0.926363  | 0.905946 | 0.924269 | 0.962373 |
 | Modelo Final Validation | 0.922938 | 0.912061 | 0.923486  | 0.900915 | 0.920705 | 0.956746 |
 
-Diferença de AUC (treino - validação): 0.0056
+Diferença de ROC AUC (treino - validação): 0.0056
 
-O modelo classificou corretamente aproximadamente 92% dos passageiros na validação (accuracy), aproximadamente 91% de equilíbrio entre Precision e Recall (F1), considerando como positivo os passageitos positivos, o modelo acertou 92% dos verdadeiros, conseguiu identificar 90% dos passageiros pertencentes à classe de satisfação como positiva.
-Ao comparar o modelo de treino e de validação, é possível identificar baixa diferença de desempenho, aproximadamente 0.56%, indicando boa capacidade de generalização e ausência de sinais relevantes de memorização de ruídos (overfitting).
+O modelo classificou corretamente aproximadamente 92% dos passageiros na validação (accuracy), aproximadamente 91% de equilíbrio entre Precision e Recall (F1), considerando como positivo os passageitos positivos, o modelo acertou 92% dos verdadeiros, conseguiu identificar 90% dos passageiros pertencentes à classe de satisfação como positiva e apresentou excelente capacidade de discriminação entre passageiros satisfeitos e insatisfeitos com 95.67% de ROC AUC.
+Ao comparar o modelo de treino e de validação, é possível identificar baixa diferença de desempenho (ROC AUC de treinamento com 96,24% e validaçã com 95,67%), aproximadamente 0.56%, indicando boa capacidade de generalização e ausência de sinais relevantes de memorização de ruídos (overfitting), estabilidade no desempenho e boa capacidade de generalização.
 
 ##### Comparação entre os modelos
 
@@ -252,10 +254,24 @@ Ao comparar o modelo de treino e de validação, é possível identificar baixa 
 | Logistic Regression Validation | 0.877129 | 0.859273 | 0.873305  | 0.845685 | 0.873940 | 0.919212 |
 | Baseline Val                   | 0.498589 | 0.469470 | 0.442340  | 0.500145 | 0.498746 | 0.498746 |
 
+- Capacidade discriminatória dos modelos:
+
+| Modelo              | ROC AUC |
+| ------------------- | ------: |
+| Modelo Final        |  95,67% |
+| XGBoost             |  95,63% |
+| LightGBM            |  95,58% |
+| Random Forest       |  95,44% |
+| Logistic Regression |  91,92% |
+| Baseline            |  49,87% |
+
+A diferença entre os modelos XGBoots, LoghtGBM e Random Fores é muito pequena.
+Portanto, não seria adequado afirmar que o Modelo Final é estatisticamente superior sem realizar testes adicionais.
+
 Resultados - Curvas ROC, Precisão/Recall e Calibração
 ![resultados](/img/resultados.png "Resultados")<br/>
 
-### Resultado de Negócios
+### Avaliação Real do Algoritmo Treinado
 
 #### Deploy
 
