@@ -1,4 +1,4 @@
-# Previsão de satisfação de clientes em companhias aérea
+# Previsão de satisfação de clientes em companhia aérea
 
 ![airlines](/img/airlines.jpg "Airlines")
 
