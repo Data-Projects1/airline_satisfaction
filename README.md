@@ -171,7 +171,7 @@ Após análise dos modelos com menores valores de erro, os modelos Light GBM e X
 
   A estratégia para definição do conjunto valores de hiperparâmetros (Hyperparameter Fine Tuning) para maximizar o aprendizado do modelo XGBoots foi a **Randomized Search**, que testa combinações aleatórias no modelo de forma rápida e exige menor capacidade de processamento se comparado ao Grid Search.
   Para o processo de cross-validation dos dados de treinamento foram divididos em 3 partes em 20 combinações diferentes de hiperparâmetros. Totalizando 60 iterações no treinamento do modelo para identificação da melhor combinação de hiperparâmetros para cada parâmetro do modelo.
-  O fine tuning divide a base em 600 árvores, sendo utilizados em cada árvora 85% das amostras, 70% das colunas disponíveis na base, máximo de 127 e mínimo de 50 folhas.
+  O fine tuning para o Randomized Search divide a base em 600 árvores, sendo utilizados em cada árvore 85% das amostras, 70% das colunas disponíveis na base, máximo de 127 e mínimo de 50 folhas.
 
   Os hiperparâmetros que apresentaram a melhor performance para aestratégia Randomized Search foram:
 
@@ -191,6 +191,7 @@ Após análise dos modelos com menores valores de erro, os modelos Light GBM e X
 - Bayesian Search
 
   Também foi aplicada a estratégia **Bayesian Search** que aprende com os testes anteriores e escolhe as variáveis respostas de forma inteligente. Para essa análise foi utilizado o Optuna com base no algoritmo TPE (Tree-structured Parzen Estimator), que aprende com as tentativas anteriores e passa a sortear hiperparâmetros em regiões mais promissoras, em vez de sortear às cegas.
+  O fine tuning para o Bayesian Search divide a base em 1139 árvores, com máximo de 10 níveis e número mínimo de 16 amostras por ramificação para controle de possível memorização de ruídos (overfitting), sendo utilizados em cada árvore 96.97% das amostras, 94.7% das colunas disponíveis na base.
 
   Os hiperparâmetros que apresentaram a melhor performance com Bayesian Search foram:
 
@@ -207,7 +208,7 @@ Após análise dos modelos com menores valores de erro, os modelos Light GBM e X
 
   Resultado: roc_auc (CV) = 0.9577
 
-  O resultado de ROC AUC (CV) de 95.77% indica uma excelente capacidade de discriminação entre as classes na validação cruzada.
+  O resultado de ROC AUC (CV) de 95.77% indica uma excelente capacidade de distinção entre as classes na validação cruzada.
 
 #### Performance do Modelo
 
