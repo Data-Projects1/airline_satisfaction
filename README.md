@@ -127,7 +127,19 @@ Ainda para seleção de variáveis relevantes para acurácia do modelo, foi apli
 
 #### Single Performance
 
-A base de dados train.csv foi dividida em 80% treino e 20% validação, sendo treinado pela base treino e validado na base validação, de mesma estrutura porém com dados novos. Foram treinados quatro métodos de modelos: Logistic Regression, Random Forest Regressor, LightGBM, XGBoost Regressor. Sendo o Average Model (modelo de média) o modelo de referência para performance de comparação dos demais modelos. <br/>
+A base de dados train.csv foi dividida em 80% treino e 20% validação, sendo treinado pela base treino e validado na base validação, de mesma estrutura porém com dados novos. Foram treinados quatro métodos de modelos: Logistic Regression, Random Forest Regressor, LightGBM, XGBoost Regressor. Sendo o Baseline Val (modelo de média) o modelo de referência para performance de comparação dos demais modelos. <br/>
+
+> > Médtricas de Treino
+
+| Model                          | Accuracy | F1 Score | precision | Recall   | AUC      | ROCAUC   |
+| ------------------------------ | -------- | -------- | --------- | -------- | -------- | -------- |
+| Baseline Val                   | 0.500059 | 0.470344 | 0.443668  | 0.500433 | 0.500097 | 0.500097 |
+| Logistic Regression Validation | 0.877515 | 0.859770 | 0.873452  | 0.846510 | 0.874371 | 0.920635 |
+| Random Forest Validation       | 0.921952 | 0.912286 | 0.909569  | 0.915020 | 0.921249 | 0.959551 |
+| LightGBM Validation            | 0.923515 | 0.913537 | 0.916178  | 0.910912 | 0.922237 | 0.958096 |
+| XGBoost Validation             | 0.925897 | 0.916232 | 0.918856  | 0.913623 | 0.924652 | 0.962482 |
+
+> > Métricas de Validação
 
 | Model                          | Accuracy | F1 Score | precision | Recall   | AUC      | ROCAUC   |
 | ------------------------------ | -------- | -------- | --------- | -------- | -------- | -------- |
