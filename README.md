@@ -129,25 +129,25 @@ Ainda para seleção de variáveis relevantes para acurácia do modelo, foi apli
 
 A base de dados train.csv foi dividida em 80% treino e 20% validação, sendo treinado pela base treino e validado na base validação, de mesma estrutura porém com dados novos. Foram treinados quatro métodos de modelos: Logistic Regression, Random Forest Regressor, LightGBM, XGBoost Regressor. Sendo o Baseline Val (modelo de média) o modelo de referência para performance de comparação dos demais modelos. <br/>
 
-> > Médtricas de Treino
+- Métricas de Treino
 
-| Model                          | Accuracy | F1 Score | precision | Recall   | AUC      | ROCAUC   |
-| ------------------------------ | -------- | -------- | --------- | -------- | -------- | -------- |
-| Baseline Val                   | 0.500059 | 0.470344 | 0.443668  | 0.500433 | 0.500097 | 0.500097 |
-| Logistic Regression Validation | 0.877515 | 0.859770 | 0.873452  | 0.846510 | 0.874371 | 0.920635 |
-| Random Forest Validation       | 0.921952 | 0.912286 | 0.909569  | 0.915020 | 0.921249 | 0.959551 |
-| LightGBM Validation            | 0.923515 | 0.913537 | 0.916178  | 0.910912 | 0.922237 | 0.958096 |
-| XGBoost Validation             | 0.925897 | 0.916232 | 0.918856  | 0.913623 | 0.924652 | 0.962482 |
+  | Model                          | Accuracy | F1 Score | precision | Recall   | AUC      | ROCAUC   |
+  | ------------------------------ | -------- | -------- | --------- | -------- | -------- | -------- |
+  | Baseline Val                   | 0.500059 | 0.470344 | 0.443668  | 0.500433 | 0.500097 | 0.500097 |
+  | Logistic Regression Validation | 0.877515 | 0.859770 | 0.873452  | 0.846510 | 0.874371 | 0.920635 |
+  | Random Forest Validation       | 0.921952 | 0.912286 | 0.909569  | 0.915020 | 0.921249 | 0.959551 |
+  | LightGBM Validation            | 0.923515 | 0.913537 | 0.916178  | 0.910912 | 0.922237 | 0.958096 |
+  | XGBoost Validation             | 0.925897 | 0.916232 | 0.918856  | 0.913623 | 0.924652 | 0.962482 |
 
-> > Métricas de Validação
+- Métricas de Validação
 
-| Model                          | Accuracy | F1 Score | precision | Recall   | AUC      | ROCAUC   |
-| ------------------------------ | -------- | -------- | --------- | -------- | -------- | -------- |
-| Baseline Val                   | 0.501240 | 0.471920 | 0.444914  | 0.502417 | 0.501359 | 0.501359 |
-| Logistic Regression Validation | 0.877129 | 0.859273 | 0.873305  | 0.845685 | 0.873940 | 0.919212 |
-| Random Forest Validation       | 0.918222 | 0.907990 | 0.906307  | 0.909680 | 0.917355 | 0.954362 |
-| LightGBM Validation            | 0.921352 | 0.910966 | 0.914897  | 0.907070 | 0.919904 | 0.955761 |
-| XGBoost Validation             | 0.921938 | 0.911650 | 0.915374  | 0.907956 | 0.920520 | 0.956250 |
+  | Model                          | Accuracy | F1 Score | precision | Recall   | AUC      | ROCAUC   |
+  | ------------------------------ | -------- | -------- | --------- | -------- | -------- | -------- |
+  | Baseline Val                   | 0.501240 | 0.471920 | 0.444914  | 0.502417 | 0.501359 | 0.501359 |
+  | Logistic Regression Validation | 0.877129 | 0.859273 | 0.873305  | 0.845685 | 0.873940 | 0.919212 |
+  | Random Forest Validation       | 0.918222 | 0.907990 | 0.906307  | 0.909680 | 0.917355 | 0.954362 |
+  | LightGBM Validation            | 0.921352 | 0.910966 | 0.914897  | 0.907070 | 0.919904 | 0.955761 |
+  | XGBoost Validation             | 0.921938 | 0.911650 | 0.915374  | 0.907956 | 0.920520 | 0.956250 |
 
 #### Real Performance - Cross Validation
 
