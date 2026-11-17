@@ -167,22 +167,47 @@ Após análise dos modelos com menores valores de erro, os modelos Light GBM e X
 
 #### Hyperparameter Fine Tuning
 
-A estratégia para definição do conjunto valores de hiperparâmetros (Hyperparameter Fine Tuning) para maximizar o aprendizado do modelo XGBoots foi a Randomized Search que testa combinações aleatórias no modelo de forma rápida e exige menor capacidade de processamento se comparado ao Grid Search.
-Para o processo de cross-validation os dados de treinamento foram divididos em 3 partes em 20 combinações diferentes de hiperparâmetros. Totalizando 60 iterações no treinamento do modelo para identificação da melhor combinação de hiperparâmetros para cada parâmetro do modelo.
-O fine tuning divide a base em 600 árvores, sendo utilizados em cada árvora 85% das amostras, 70% das colunas disponíveis na base, máximo de 127 e mínimo de 50 folhas.
+- Randomized Search
 
-Os hiperparâmetros que apresentaram a melhor performance para o modelo XGBoost foram:
+  A estratégia para definição do conjunto valores de hiperparâmetros (Hyperparameter Fine Tuning) para maximizar o aprendizado do modelo XGBoots foi a **Randomized Search**, que testa combinações aleatórias no modelo de forma rápida e exige menor capacidade de processamento se comparado ao Grid Search.
+  Para o processo de cross-validation dos dados de treinamento foram divididos em 3 partes em 20 combinações diferentes de hiperparâmetros. Totalizando 60 iterações no treinamento do modelo para identificação da melhor combinação de hiperparâmetros para cada parâmetro do modelo.
+  O fine tuning divide a base em 600 árvores, sendo utilizados em cada árvora 85% das amostras, 70% das colunas disponíveis na base, máximo de 127 e mínimo de 50 folhas.
 
-| Parâmetro         | Valor |
-| ----------------- | ----- |
-| subsample         | 0.85  |
-| num_leaves        | 127   |
-| n_estimators      | 600   |
-| min_child_samples | 50    |
-| learning_rate     | 0.05  |
-| colsample_bytree  | 0.7   |
+  Os hiperparâmetros que apresentaram a melhor performance para aestratégia Randomized Search foram:
 
--0.23143427073955536
+  | Parâmetro         | Valor |
+  | ----------------- | ----- |
+  | subsample         | 0.85  |
+  | num_leaves        | 127   |
+  | n_estimators      | 600   |
+  | min_child_samples | 50    |
+  | learning_rate     | 0.05  |
+  | colsample_bytree  | 0.7   |
+
+  Resultado: RMSE = -0.23143427073955536
+
+  O resultado RMSE pela validação cruzada de aproximadamente 23.14% indica que o erro médio quadrático da raiz tem baixa capacidade de discriminação entre as classes na validação cruzada. A inversão de sinal é convenção da estratégia, devendo ser considerados valores maiores como melhores resultados.
+
+- Bayesian Search
+
+  Também foi aplicada a estratégia **Bayesian Search** que aprende com os testes anteriores e escolhe as variáveis respostas de forma inteligente. Para essa análise foi utilizado o Optuna com base no algoritmo TPE (Tree-structured Parzen Estimator), que aprende com as tentativas anteriores e passa a sortear hiperparâmetros em regiões mais promissoras, em vez de sortear às cegas.
+
+  Os hiperparâmetros que apresentaram a melhor performance com Bayesian Search foram:
+
+  | Parâmetro        | Valor                |
+  | ---------------- | -------------------- |
+  | n_estimators     | 1139                 |
+  | learning_rate    | 0.010657839740514352 |
+  | max_depth        | 10                   |
+  | min_child_weight | 16                   |
+  | subsample        | 0.9697494707820946   |
+  | colsample_bytree | 0.9474136752138245   |
+  | reg_lambda       | 0.6218704727769077   |
+  | reg_alpha        | 0.5829384542994738   |
+
+  Resultado: roc_auc (CV) = 0.9577
+
+  O resultado de ROC AUC (CV) de 95.77% indica uma excelente capacidade de discriminação entre as classes na validação cruzada.
 
 #### Performance do Modelo
 
