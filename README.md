@@ -102,14 +102,14 @@ Das 22 hipóteses levantadas, 11 foram selecionadas para validação através de
 
 #### Top 3 Insights
 
-H1 Facilidade de autoserviço online de agendamento aumenta o nível de satisfação do cliente.
+H1 Facilidade de autoserviço online de agendamento aumenta o nível de satisfação do cliente.<br/>
 **VERDADEIRA** A facilidade de autoserviço online de agendamento aumenta o nível de satisfação do cliente.<br/>
 ![hipótese1](/img/H1.png "Hipótese 1")<br/><br/>
 
-H5 Quanto maior a satisfação com o serviço de wifi a bordo maior a satisfação do cliente.
+H5 Quanto maior a satisfação com o serviço de wifi a bordo maior a satisfação do cliente.<br/>
 **VERDADEIRA** Quanto maior a satisfação com serviço de wifi a bordo maior a satisfação do cliente.<br/>
 ![hipótese5](/img/H5.png "Hipótese 5")<br/><br/>
-H11 Viajantes a trabalho tem maior nível de satisfação.
+H11 Viajantes a trabalho tem maior nível de satisfação.<br/>
 **VERDADEIRA** Viajantas a trabalho tem maior nível de satisfação.<br/>
 ![hipótese11](/img/H11.png "Hipótese 11")<br/><br/>
 
@@ -131,13 +131,13 @@ A base de dados train.csv foi dividida em 80% treino e 20% validação, sendo tr
 
 - Métricas de Treino
 
-  | Model                          | Accuracy | F1 Score | precision | Recall   | AUC      | ROC AUC  |
-  | ------------------------------ | -------- | -------- | --------- | -------- | -------- | -------- |
-  | Baseline Val                   | 0.500059 | 0.470344 | 0.443668  | 0.500433 | 0.500097 | 0.500097 |
-  | Logistic Regression Validation | 0.877515 | 0.859770 | 0.873452  | 0.846510 | 0.874371 | 0.920635 |
-  | Random Forest Validation       | 0.921952 | 0.912286 | 0.909569  | 0.915020 | 0.921249 | 0.959551 |
-  | LightGBM Validation            | 0.923515 | 0.913537 | 0.916178  | 0.910912 | 0.922237 | 0.958096 |
-  | XGBoost Validation             | 0.925897 | 0.916232 | 0.918856  | 0.913623 | 0.924652 | 0.962482 |
+  | Model                     | Accuracy | F1 Score | precision | Recall   | AUC      | ROC AUC  |
+  | ------------------------- | -------- | -------- | --------- | -------- | -------- | -------- |
+  | Baseline Train            | 0.500059 | 0.470344 | 0.443668  | 0.500433 | 0.500097 | 0.500097 |
+  | Logistic Regression Train | 0.877515 | 0.859770 | 0.873452  | 0.846510 | 0.874371 | 0.920635 |
+  | Random Forest Train       | 0.921952 | 0.912286 | 0.909569  | 0.915020 | 0.921249 | 0.959551 |
+  | Light GBM Train           | 0.923515 | 0.913537 | 0.916178  | 0.910912 | 0.922237 | 0.958096 |
+  | XGBoost Train             | 0.925897 | 0.916232 | 0.918856  | 0.913623 | 0.924652 | 0.962482 |
 
 - Métricas de Validação
 
@@ -146,22 +146,43 @@ A base de dados train.csv foi dividida em 80% treino e 20% validação, sendo tr
   | Baseline Val                   | 0.501240 | 0.471920 | 0.444914  | 0.502417 | 0.501359 | 0.501359 |
   | Logistic Regression Validation | 0.877129 | 0.859273 | 0.873305  | 0.845685 | 0.873940 | 0.919212 |
   | Random Forest Validation       | 0.918222 | 0.907990 | 0.906307  | 0.909680 | 0.917355 | 0.954362 |
-  | LightGBM Validation            | 0.921352 | 0.910966 | 0.914897  | 0.907070 | 0.919904 | 0.955761 |
+  | Light GBM Validation           | 0.921352 | 0.910966 | 0.914897  | 0.907070 | 0.919904 | 0.955761 |
   | XGBoost Validation             | 0.921938 | 0.911650 | 0.915374  | 0.907956 | 0.920520 | 0.956250 |
 
-#### Real Performance - Cross Validation
+#### Real Performance - Cross-Validation
 
-- Métricas de Cross Validation
-  | Model | ROC AUC | Log Loss | Brier | F1 |
-  | ------------------------------ | -------- | -------- | --------- | -------- |
-  | LogReg | 0.9206 ± 0.0008 |0.3464 ± 0.0019 |0.0982 ± 0.0007 |0.8597 ± 0.0010|
-  | RandomForest | 0.9554 ± 0.0006 |0.2423 ± 0.0021 |0.0655 ± 0.0007 |0.9093 ± 0.0011|
-  | LightGBM | 0.9570 ± 0.0005 |0.2346 ± 0.0019 |0.0630 ± 0.0006 |0.9130 ± 0.0007|
-  | XGBoost | 0.9572 ± 0.0006 |0.2339 ± 0.0018 |0.0626 ± 0.0006 |0.9137 ± 0.0008|
+- Métricas de comparação entre modelos (Cross Validation)
+
+  | Model               | ROC AUC         | Log Loss        | Brier           | F1              |
+  | ------------------- | --------------- | --------------- | --------------- | --------------- |
+  | Logistic Regression | 0.9206 ± 0.0008 | 0.3464 ± 0.0019 | 0.0982 ± 0.0007 | 0.8597 ± 0.0010 |
+  | Random Forest       | 0.9554 ± 0.0006 | 0.2423 ± 0.0021 | 0.0655 ± 0.0007 | 0.9093 ± 0.0011 |
+  | Light GBM           | 0.9570 ± 0.0005 | 0.2346 ± 0.0019 | 0.0630 ± 0.0006 | 0.9130 ± 0.0007 |
+  | XGBoost             | 0.9572 ± 0.0006 | 0.2339 ± 0.0018 | 0.0626 ± 0.0006 | 0.9137 ± 0.0008 |
+
+Foi aplicado método de validação cruzada (Cross-Validation) sobre o conjunto de dados train.csv que foi dividido em cinco partes para que o modelo fosse treinado e avaliado repetidamente. Nesse processo a performance real do modelo foi o resultado da média de 3 cortes e desvio padrão do treino e validação. O que fornece uma estimativa mais robusta da capacidade de generalização do modelo.
+Após análise dos modelos com menores valores de erro, os modelos Light GBM e XGBoost foram os que apresentaram melhores performances. Apesar do Random Forest ter menor erro, o modelo de XGBoost apresentou melhor capacidade de otimização de recursos se comparado ao modelo Random Forest.
 
 ### Machine Learning Performance
 
 #### Hyperparameter Fine Tuning
+
+A estratégia para definição do conjunto valores de hiperparâmetros (Hyperparameter Fine Tuning) para maximizar o aprendizado do modelo XGBoots foi a Randomized Search que testa combinações aleatórias no modelo de forma rápida e exige menor capacidade de processamento se comparado ao Grid Search.
+Para o processo de cross-validation os dados de treinamento foram divididos em 3 partes em 20 combinações diferentes de hiperparâmetros. Totalizando 60 iterações no treinamento do modelo para identificação da melhor combinação de hiperparâmetros para cada parâmetro do modelo.
+O fine tuning divide a base em 600 árvores, sendo utilizados em cada árvora 85% das amostras, 70% das colunas disponíveis na base, máximo de 127 e mínimo de 50 folhas.
+
+Os hiperparâmetros que apresentaram a melhor performance para o modelo XGBoost foram:
+
+| Parâmetro         | Valor |
+| ----------------- | ----- |
+| subsample         | 0.85  |
+| num_leaves        | 127   |
+| n_estimators      | 600   |
+| min_child_samples | 50    |
+| learning_rate     | 0.05  |
+| colsample_bytree  | 0.7   |
+
+-0.23143427073955536
 
 #### Performance do Modelo
 
