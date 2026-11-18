@@ -189,7 +189,7 @@ As estratégias para definição do conjunto valores de hiperparâmetros (Hyperp
 
   Resultado: LogLoss = -0.23143427073955536
 
-  O resultado Log Loss pela validação cruzada de aproximadamente 23.14% indica que o modelo tem boa capacidade de discriminação entre as classes na validação cruzada. A inversão de sinal é convenção da estratégia, devendo ser considerados valores maiores como melhores resultados, logo quanto mais próximo a zero melhor é a capacidade de discriminação entre as classes. <br/>
+  O resultado Log Loss pela validação cruzada de aproximadamente 23.14% indica que o modelo tem boa capacidade de discriminação entre as classes na validação cruzada. A convenção do Log Loss (Logarithmic Loss) tem por finalidade medir o quanto as previsões de um modelo são distintas dos resultados reais. Logo valores menores apresentam melhores resultados e melhor é a capacidade de classificação. <br/>
 
 - **Bayesian Search**
 
