@@ -1,6 +1,6 @@
 # Previsão de satisfação de clientes em companhia aérea
 
-![airlines](/img/airline.jpg "Airlines")
+![airlines](/img/fly.png "Airlines")
 
 ## Análise curva ROC
 
