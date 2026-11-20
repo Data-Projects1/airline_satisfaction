@@ -18,6 +18,18 @@ O projeto aborda etapas importantes do ciclo CRISP de um modelo de Machine Learn
 8. Avaliação dos algoritmos (otimização de hiperparâmetros)
 9. Exportação do modelo
 
+## Estrutura das pastas
+
+| Pasta            | Descrição                                                             |
+| ---------------- | --------------------------------------------------------------------- |
+| .vscode          | arquivo JSON para transformação de variáveis categóricas              |
+| img              | Imagens utilizadas no projeto                                         |
+| notebook         | Notebook com processo de análise de dados e desenvolviemnto do modelo |
+| src              | Versionamento do python                                               |
+| .gitignore       | Arquivos com dados a serem ignorados na publicação                    |
+| README.md        | Documentação do projeto                                               |
+| requirements.txt | Requisitos mínimos para executar o projeto                            |
+
 ## Análise curva ROC
 
 A avaliação da análise será com base na área sob a curva ROC (Receiver Operating Characteristic), para avaliar o desempenho de modelos de classificação de satisfação de forma binária na comparação do cálculo de probabilidade prevista e o resultado observado através de modelos de Machine Learning como Logistic Regression, Random Forest, XGBoost e LightGBM.
