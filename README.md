@@ -2,6 +2,22 @@
 
 ![airlines](/img/fly.png "Airlines")
 
+Este projeto contempla o ciclo completo de um modelo de Machine Learning, baseado no método CRISP desde o entendimento do problema, limpezade dados, exploração de dados (EDA), modelagem dos dados, treinamento e avaliação do modelo até a disponibilização de uma base de dados com base de prováveis respostas de satisfação depassageiros decompania aérea.
+
+O modelo foi treinado utilizando o dataset test.csv, com o objetivo de prever se um passageiro estará satisfeito com serviços de uma companhia aérea.
+
+O projeto aborda etapas importantes do ciclo CRISP de um modelo de Machine Learning:
+
+1. Questão de negócio
+2. Entendimento do negócio
+3. Coleta de dados
+4. Limpeza de dados
+5. Exploração de dados (EDA)
+6. Modelagem de dados
+7. Algoritmos de Machine Learning (treinamento de modelos de classificação)
+8. Avaliação dos algoritmos (otimização de hiperparâmetros)
+9. Exportação do modelo
+
 ## Análise curva ROC
 
 A avaliação da análise será com base na área sob a curva ROC (Receiver Operating Characteristic), para avaliar o desempenho de modelos de classificação de satisfação de forma binária na comparação do cálculo de probabilidade prevista e o resultado observado através de modelos de Machine Learning como Logistic Regression, Random Forest, XGBoost e LightGBM.
