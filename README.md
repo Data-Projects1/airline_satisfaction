@@ -22,7 +22,7 @@ O projeto aborda etapas importantes do ciclo CRISP de um modelo de Machine Learn
 
 | Pasta            | Descrição                                                             |
 | ---------------- | --------------------------------------------------------------------- |
-| .vscode          | arquivo JSON para transformação de variáveis categóricas              |
+| .vscode          | Arquivo JSON para transformação de variáveis categóricas              |
 | img              | Imagens utilizadas no projeto                                         |
 | notebook         | Notebook com processo de análise de dados e desenvolviemnto do modelo |
 | src              | Versionamento do python                                               |
