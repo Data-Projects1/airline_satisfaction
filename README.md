@@ -163,20 +163,20 @@ A base de dados train.csv foi dividida em 80% treino e 20% validação, sendo tr
 
   | Model                     | Accuracy | F1 Score | precision | Recall   | AUC      | ROC AUC  |
   | ------------------------- | -------- | -------- | --------- | -------- | -------- | -------- |
-  | Baseline Train            | 0.500059 | 0.470344 | 0.443668  | 0.500433 | 0.500097 | 0.500097 |
+  | Baseline Train            | 0.500434 | 0.470168 | 0.443928  | 0.499704 | 0.500360 | 0.500360 |
   | Logistic Regression Train | 0.877515 | 0.859770 | 0.873452  | 0.846510 | 0.874371 | 0.920635 |
   | Random Forest Train       | 0.921952 | 0.912286 | 0.909569  | 0.915020 | 0.921249 | 0.959551 |
-  | Light GBM Train           | 0.923515 | 0.913537 | 0.916178  | 0.910912 | 0.922237 | 0.958096 |
+  | LightGBM Train            | 0.923515 | 0.913537 | 0.916178  | 0.910912 | 0.922237 | 0.958096 |
   | XGBoost Train             | 0.925897 | 0.916232 | 0.918856  | 0.913623 | 0.924652 | 0.962482 |
 
 - Métricas de Validação
 
   | Model                          | Accuracy | F1 Score | precision | Recall   | AUC      | ROC AUC  |
   | ------------------------------ | -------- | -------- | --------- | -------- | -------- | -------- |
-  | Baseline Val                   | 0.501240 | 0.471920 | 0.444914  | 0.502417 | 0.501359 | 0.501359 |
+  | Baseline Val                   | 0.501955 | 0.471917 | 0.445479  | 0.501692 | 0.501928 | 0.501928 |
   | Logistic Regression Validation | 0.877129 | 0.859273 | 0.873305  | 0.845685 | 0.873940 | 0.919212 |
   | Random Forest Validation       | 0.918222 | 0.907990 | 0.906307  | 0.909680 | 0.917355 | 0.954362 |
-  | Light GBM Validation           | 0.921352 | 0.910966 | 0.914897  | 0.907070 | 0.919904 | 0.955761 |
+  | LightGBM Validation            | 0.921352 | 0.910966 | 0.914897  | 0.907070 | 0.919904 | 0.955761 |
   | XGBoost Validation             | 0.921938 | 0.911650 | 0.915374  | 0.907956 | 0.920520 | 0.956250 |
 
 #### Real Performance - Cross-Validation
@@ -206,18 +206,16 @@ As estratégias para definição do conjunto valores de hiperparâmetros (Hyperp
 
   Os hiperparâmetros que apresentaram a melhor performance para aestratégia Randomized Search foram:
 
-  | Parâmetro         | Valor |
-  | ----------------- | ----- |
-  | subsample         | 0.85  |
-  | num_leaves        | 127   |
-  | n_estimators      | 600   |
-  | min_child_samples | 50    |
-  | learning_rate     | 0.05  |
-  | colsample_bytree  | 0.7   |
+  | Parâmetro        | Valor |
+  | ---------------- | ----- |
+  | subsample        | 0.85  |
+  | n_estimators     | 400   |
+  | learning_rate    | 0.1   |
+  | colsample_bytree | 0.7   |
 
-  Resultado: LogLoss = -0.23143427073955536
+  Resultado: LogLoss = -0.23156880835692087
 
-  O resultado Log Loss pela validação cruzada de aproximadamente 23.14% indica que o modelo tem boa capacidade de discriminação entre as classes na validação cruzada. A convenção do Log Loss (Logarithmic Loss) tem por finalidade medir o quanto as previsões de um modelo são distintas dos resultados reais. Logo valores menores apresentam melhores resultados e melhor é a capacidade de classificação. <br/>
+  O resultado Log Loss pela validação cruzada de aproximadamente 23.2% indica que o modelo tem boa capacidade de discriminação entre as classes na validação cruzada. A convenção do Log Loss (Logarithmic Loss) tem por finalidade medir o quanto as previsões de um modelo são distintas dos resultados reais. Logo valores menores apresentam melhores resultados e melhor é a capacidade de classificação. <br/>
 
 - **Bayesian Search**
 
@@ -228,34 +226,36 @@ As estratégias para definição do conjunto valores de hiperparâmetros (Hyperp
 
   | Parâmetro        | Valor                |
   | ---------------- | -------------------- |
-  | n_estimators     | 1139                 |
-  | learning_rate    | 0.010657839740514352 |
-  | max_depth        | 10                   |
-  | min_child_weight | 16                   |
-  | subsample        | 0.9697494707820946   |
-  | colsample_bytree | 0.9474136752138245   |
-  | reg_lambda       | 0.6218704727769077   |
-  | reg_alpha        | 0.5829384542994738   |
+  | n_estimators     | 1500                 |
+  | learning_rate    | 0.013375424866174013 |
+  | max_depth        | 8                    |
+  | min_child_weight | 6                    |
+  | subsample        | 0.8401377510292775   |
+  | colsample_bytree | 0.6058857618570598   |
+  | reg_lambda       | 2.0363048696802526   |
+  | reg_alpha        | 0.1402461388211983   |
 
-  Resultado: roc_auc (CV) = 0.9577
+  Resultado: roc_auc (CV) = 0.9579
 
-  O resultado de ROC AUC (CV) de 95.77% indica uma excelente capacidade de distinção entre as classes na validação cruzada.
+  O resultado de ROC AUC (CV) de 95.8% indica uma excelente capacidade de distinção entre as classes na validação cruzada.
   - XGBoots Optuna Métricas de Treino e Validação
 
   | Model                     | Accuracy | F1 Score | precision | Recall   | AUC      | ROC AUC  |
   | ------------------------- | -------- | -------- | --------- | -------- | -------- | -------- |
-  | XGBoost Optuna Train      | 0.927941 | 0.918412 | 0.922522  | 0.914340 | 0.926562 | 0.966036 |
-  | XGBoost Optuna Validation | 0.922653 | 0.912314 | 0.917570  | 0.907118 | 0.921077 | 0.956935 |
+  | XGBoost Optuna Train      | 0.927459 | 0.917927 | 0.921350  | 0.914529 | 0.926147 | 0.964839 |
+  | XGBoost Optuna Validation | 0.922624 | 0.912354 | 0.916844  | 0.907907 | 0.921132 | 0.956947 |
+
+  <br/>
   - Cross-validation entre modelos
 
   | Model                          | Accuracy | F1 Score | precision | Recall   | AUC      | ROC AUC  |
   | ------------------------------ | -------- | -------- | --------- | -------- | -------- | -------- |
-  | XGBoost Optuna Validation      | 0.922653 | 0.912314 | 0.917570  | 0.907118 | 0.921077 | 0.956935 |
+  | XGBoost Optuna Validation      | 0.922624 | 0.912354 | 0.916844  | 0.907907 | 0.921132 | 0.956947 |
   | XGBoost Validation             | 0.921938 | 0.911650 | 0.915374  | 0.907956 | 0.920520 | 0.956250 |
   | LightGBM Validation            | 0.921352 | 0.910966 | 0.914897  | 0.907070 | 0.919904 | 0.955761 |
   | Random Forest Validation       | 0.918222 | 0.907990 | 0.906307  | 0.909680 | 0.917355 | 0.954362 |
   | Logistic Regression Validation | 0.877129 | 0.859273 | 0.873305  | 0.845685 | 0.873940 | 0.919212 |
-  | Baseline Val                   | 0.498589 | 0.469470 | 0.442340  | 0.500145 | 0.498746 | 0.498746 |
+  | Baseline Val                   | 0.501955 | 0.471917 | 0.445479  | 0.501692 | 0.501928 | 0.501928 |
 
 #### Performance do Modelo
 
@@ -263,41 +263,41 @@ As estratégias para definição do conjunto valores de hiperparâmetros (Hyperp
 
 | Model                   | Accuracy | F1 Score | precision | Recall   | AUC      | ROC AUC  |
 | ----------------------- | -------- | -------- | --------- | -------- | -------- | -------- |
-| Modelo Final Train      | 0.926337 | 0.916040 | 0.926363  | 0.905946 | 0.924269 | 0.962373 |
-| Modelo Final Validation | 0.922938 | 0.912061 | 0.923486  | 0.900915 | 0.920705 | 0.956746 |
+| Modelo Final Train      | 0.927459 | 0.917927 | 0.921350  | 0.914529 | 0.926147 | 0.964839 |
+| Modelo Final Validation | 0.922624 | 0.912354 | 0.916844  | 0.907907 | 0.921132 | 0.956947 |
 
-Diferença de ROC AUC (treino - validação): 0.0056
+Diferença de ROC AUC (treino - validação): 0.0079
 
-O modelo classificou corretamente aproximadamente 92% dos passageiros na validação (accuracy), aproximadamente 91% de equilíbrio entre Precision e Recall (F1), considerando como positivo os passageitos positivos, o modelo acertou 92% dos verdadeiros, conseguiu identificar 90% dos passageiros pertencentes à classe de satisfação como positiva e apresentou excelente capacidade de discriminação entre passageiros satisfeitos e insatisfeitos com 95.67% de ROC AUC.
-Ao comparar o modelo de treino e de validação, é possível identificar baixa diferença de desempenho (ROC AUC de treinamento com 96,24% e validaçã com 95,67%), aproximadamente 0.56%, indicando boa capacidade de generalização e ausência de sinais relevantes de memorização de ruídos (overfitting), estabilidade no desempenho e boa capacidade de generalização.
+O modelo classificou corretamente aproximadamente 93% dos passageiros na validação (accuracy), aproximadamente 92% de equilíbrio entre Precision e Recall (F1), considerando como positivo os passageitos positivos, o modelo acertou 92% dos verdadeiros, conseguiu identificar 91% dos passageiros pertencentes à classe de satisfação como positiva e apresentou excelente capacidade de discriminação entre passageiros satisfeitos e insatisfeitos com 95.7% de ROC AUC.
+Ao comparar o modelo de treino e de validação, é possível identificar baixa diferença de desempenho (ROC AUC de treinamento com 96,5% e validaçã com 95,7%), aproximadamente 0.79%, indicando boa capacidade de generalização e ausência de sinais relevantes de memorização de ruídos (overfitting), estabilidade no desempenho e boa capacidade de generalização.
 
 ##### Comparação entre os modelos
 
 | Model                          | Accuracy | F1 Score | precision | Recall   | AUC      | ROC AUC  |
 | ------------------------------ | -------- | -------- | --------- | -------- | -------- | -------- |
-| Modelo Final Validation        | 0.922938 | 0.912061 | 0.923486  | 0.900915 | 0.920705 | 0.956746 |
+| Modelo Final Validation        | 0.922624 | 0.912354 | 0.916844  | 0.907907 | 0.921132 | 0.956947 |
 | XGBoost Validation             | 0.921938 | 0.911650 | 0.915374  | 0.907956 | 0.920520 | 0.956250 |
 | LightGBM Validation            | 0.921352 | 0.910966 | 0.914897  | 0.907070 | 0.919904 | 0.955761 |
 | Random Forest Validation       | 0.918222 | 0.907990 | 0.906307  | 0.909680 | 0.917355 | 0.954362 |
 | Logistic Regression Validation | 0.877129 | 0.859273 | 0.873305  | 0.845685 | 0.873940 | 0.919212 |
-| Baseline Val                   | 0.498589 | 0.469470 | 0.442340  | 0.500145 | 0.498746 | 0.498746 |
+| Baseline Val                   | 0.502362 | 0.472705 | 0.445956  | 0.502868 | 0.502413 | 0.502413 |
 
 - Capacidade discriminatória dos modelos:
 
 | Modelo              | ROC AUC |
 | ------------------- | ------: |
-| Modelo Final        |  95,67% |
+| Modelo Final        |  95,69% |
 | XGBoost             |  95,63% |
 | LightGBM            |  95,58% |
 | Random Forest       |  95,44% |
 | Logistic Regression |  91,92% |
-| Baseline            |  49,87% |
+| Baseline            |  50,24% |
 
 A diferença entre os modelos XGBoots, LoghtGBM e Random Fores é muito pequena.
 Portanto, não seria adequado afirmar que o Modelo Final é estatisticamente superior sem realizar testes adicionais.
 
 Resultados - Curvas ROC, Precisão/Recall e Calibração
-![resultados](/img/resultados.png "Resultados")<br/>
+![resultados](/img/optuna.png "Resultados Optuna")<br/>
 
 ### Avaliação Real do Algoritmo Treinado
 
