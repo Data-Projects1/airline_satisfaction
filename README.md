@@ -2,11 +2,11 @@
 
 ![airlines](/img/fly.png "Airlines")
 
-Este projeto contempla o ciclo completo de um modelo de Machine Learning, baseado no método CRISP desde o entendimento do problema, limpezade dados, exploração de dados (EDA), modelagem dos dados, treinamento e avaliação do modelo até a disponibilização de uma base de dados com base de prováveis respostas de satisfação depassageiros decompania aérea.
+Este projeto contempla o ciclo completo de um modelo de Machine Learning, baseado no método CRISP desde o entendimento do problema, limpezade dados, exploração de dados (EDA), modelagem dos dados, treinamento e avaliação do modelo até a disponibilização de uma base de dados com base de prováveis respostas de satisfação depassageiros de companhia aérea.
 
 O modelo foi treinado utilizando o dataset test.csv, com o objetivo de prever se um passageiro estará satisfeito com serviços de uma companhia aérea.
 
-O projeto aborda etapas importantes do ciclo CRISP de um modelo de Machine Learning:
+O projeto aborda etapas importantes do ciclo CRISP-SP de um modelo de Machine Learning:
 
 1. Questão de negócio
 2. Entendimento do negócio
@@ -202,7 +202,7 @@ As estratégias para definição do conjunto valores de hiperparâmetros (Hyperp
 - **Randomized Search**
 
   O processo de cross-validation dos dados de treinamento com Randomized Search dividiu os dados em 3 partes em 20 combinações diferentes de hiperparâmetros. Totalizando 60 iterações no treinamento do modelo para identificação da melhor combinação de hiperparâmetros para cada parâmetro do modelo.
-  O fine tuning para o Randomized Search divide a base em 600 árvores, sendo utilizados em cada árvore 85% das amostras, 70% das variáveis disponíveis na base, máximo de 127 e mínimo de 50 folhas.
+  O fine tuning para o Randomized Search divide a base em 400 árvores, sendo utilizados em cada árvore 85% das amostras, 70% das variáveis disponíveis na base.
 
   Os hiperparâmetros que apresentaram a melhor performance para aestratégia Randomized Search foram:
 
@@ -219,7 +219,7 @@ As estratégias para definição do conjunto valores de hiperparâmetros (Hyperp
 
 - **Bayesian Search**
 
-  A análise Bayesian Search utilizaou o Optuna com base no algoritmo TPE (Tree-structured Parzen Estimator), que aprende com as tentativas anteriores e passa a sortear hiperparâmetros em regiões mais promissoras, em vez de sortear às cegas.
+  A análise Bayesian Search utilizou o Optuna com base no algoritmo TPE (Tree-structured Parzen Estimator), que aprende com as tentativas anteriores e passa a sortear hiperparâmetros em regiões mais promissoras, em vez de sortear às cegas.
   O fine tuning para o Bayesian Search divide a base em 1139 árvores, máximo de 10 níveis (cortes) com mínimo de 16 amostras por ramificação para controle de possível memorização de ruídos (overfitting), sendo utilizados em cada árvore aproximadamente 97% das amostras e 95% das variáveis disponíveis na base.
 
   Os hiperparâmetros que apresentaram a melhor performance com Bayesian Search foram:
@@ -306,5 +306,5 @@ O arquivo "submission.csv" com a variável resposta de satisfação dos passagei
 
 ### Conclusões
 
-A diferença entre os modelos XGBoots, LoghtGBM e Random Fores é muito pequena.
+A diferença entre os modelos XGBoost, LoghtGBM e Random Forest é muito pequena.
 Portanto, não seria adequado afirmar que o Modelo Final é estatisticamente superior sem realizar testes adicionais.
