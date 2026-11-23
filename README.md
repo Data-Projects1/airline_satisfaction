@@ -140,7 +140,7 @@ H5 Quanto maior a satisfação com o serviço de wifi a bordo maior a satisfaç�
 **VERDADEIRA** Quanto maior a satisfação com serviço de wifi a bordo maior a satisfação do cliente.<br/>
 ![hipótese5](/img/H5.png "Hipótese 5")<br/><br/>
 H11 Viajantes a trabalho tem maior nível de satisfação.<br/>
-**VERDADEIRA** Viajantas a trabalho tem maior nível de satisfação.<br/>
+**VERDADEIRA** Viajantes a trabalho tem maior nível de satisfação.<br/>
 ![hipótese11](/img/H11.png "Hipótese 11")<br/><br/>
 
 ### Modelo de Machine Learning
@@ -268,8 +268,8 @@ As estratégias para definição do conjunto valores de hiperparâmetros (Hyperp
 
 Diferença de ROC AUC (treino - validação): 0.0079
 
-O modelo classificou corretamente aproximadamente 93% dos passageiros na validação (accuracy), aproximadamente 92% de equilíbrio entre Precision e Recall (F1), considerando como positivo os passageitos positivos, o modelo acertou 92% dos verdadeiros, conseguiu identificar 91% dos passageiros pertencentes à classe de satisfação como positiva e apresentou excelente capacidade de discriminação entre passageiros satisfeitos e insatisfeitos com 95.7% de ROC AUC.
-Ao comparar o modelo de treino e de validação, é possível identificar baixa diferença de desempenho (ROC AUC de treinamento com 96,5% e validaçã com 95,7%), aproximadamente 0.79%, indicando boa capacidade de generalização e ausência de sinais relevantes de memorização de ruídos (overfitting), estabilidade no desempenho e boa capacidade de generalização.
+O modelo classificou corretamente aproximadamente 93% dos passageiros na validação (accuracy), aproximadamente 92% de equilíbrio entre Precision e Recall (F1), considerando como positivo os passageitos positivos, o modelo acertou 92% dos verdadeiros, conseguiu identificar 91% dos passageiros pertencentes à classe de satisfação como positiva e apresentou excelente capacidade de discriminação entre passageiros satisfeitos e insatisfeitos com 96% de ROC AUC.
+Ao comparar o modelo de treino e de validação, é possível identificar baixa diferença de desempenho (ROC AUC de treinamento com 97% e validaçã com 96%), aproximadamente 0.79%.
 
 ##### Comparação entre os modelos
 
@@ -293,14 +293,18 @@ Ao comparar o modelo de treino e de validação, é possível identificar baixa 
 | Logistic Regression |  91,92% |
 | Baseline            |  50,24% |
 
-A diferença entre os modelos XGBoots, LoghtGBM e Random Fores é muito pequena.
-Portanto, não seria adequado afirmar que o Modelo Final é estatisticamente superior sem realizar testes adicionais.
-
 Resultados - Curvas ROC, Precisão/Recall e Calibração
 ![resultados](/img/optuna.png "Resultados Optuna")<br/>
 
 ### Avaliação Real do Algoritmo Treinado
 
+Ao comparar o modelo apresenta boa capacidade de generalização e ausência de sinais relevantes memorização de respostas (overfitting) além de desempenho estável.
+
 #### Deploy
 
+O arquivo "submission.csv" com a variável resposta de satisfação dos passageiros foi publicada em 30 de outubro de 2026 e encontra-se disponível no link de submissões da competição em [Kaggle - Predicting Airline Satisfaction Submissions](https://www.kaggle.com/competitions/playground-series-s6e10/submissions).
+
 ### Conclusões
+
+A diferença entre os modelos XGBoots, LoghtGBM e Random Fores é muito pequena.
+Portanto, não seria adequado afirmar que o Modelo Final é estatisticamente superior sem realizar testes adicionais.
