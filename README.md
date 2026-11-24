@@ -220,7 +220,7 @@ As estratégias para definição do conjunto valores de hiperparâmetros (Hyperp
 - **Bayesian Search**
 
   A análise Bayesian Search utilizou o Optuna com base no algoritmo TPE (Tree-structured Parzen Estimator), que aprende com as tentativas anteriores e passa a sortear hiperparâmetros em regiões mais promissoras, em vez de sortear às cegas.
-  O fine tuning para o Bayesian Search divide a base em 1139 árvores, máximo de 10 níveis (cortes) com mínimo de 16 amostras por ramificação para controle de possível memorização de ruídos (overfitting), sendo utilizados em cada árvore aproximadamente 97% das amostras e 95% das variáveis disponíveis na base.
+  O fine tuning para o Bayesian Search divide a base em 1500 árvores, máximo de 8 níveis (cortes) com mínimo de peso mínimo de 6 dos valores de Hessiana necessários em um nó filho para evitar memorização de ruídos (overfitting), sendo utilizados em cada árvore aproximadamente 97% das amostras e 95% das variáveis disponíveis na base.
 
   Os hiperparâmetros que apresentaram a melhor performance com Bayesian Search foram:
 
