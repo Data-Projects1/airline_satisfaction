@@ -286,12 +286,12 @@ Ao comparar o modelo de treino e de validação, é possível identificar baixa 
 
 | Modelo              | ROC AUC |
 | ------------------- | ------: |
-| Modelo Final        |  95,69% |
-| XGBoost             |  95,63% |
-| LightGBM            |  95,58% |
-| Random Forest       |  95,44% |
-| Logistic Regression |  91,92% |
-| Baseline            |  50,24% |
+| Modelo Final        |  95.69% |
+| XGBoost             |  95.63% |
+| LightGBM            |  95.58% |
+| Random Forest       |  95.44% |
+| Logistic Regression |  91.92% |
+| Baseline            |  50.24% |
 
 Resultados - Curvas ROC, Precisão/Recall e Calibração
 ![resultados](/img/optuna.png "Resultados Optuna")<br/>
