@@ -269,7 +269,7 @@ As estratégias para definição do conjunto valores de hiperparâmetros (Hyperp
 Diferença de ROC AUC (treino - validação): 0.0079
 
 O modelo classificou corretamente aproximadamente 93% dos passageiros na validação (accuracy), aproximadamente 92% de equilíbrio entre Precision e Recall (F1), considerando como positivo os passageitos positivos, o modelo acertou 92% dos verdadeiros, conseguiu identificar 91% dos passageiros pertencentes à classe de satisfação como positiva e apresentou excelente capacidade de discriminação entre passageiros satisfeitos e insatisfeitos com 96% de ROC AUC.
-Ao comparar o modelo de treino e de validação, é possível identificar baixa diferença de desempenho (ROC AUC de treinamento com 97% e validaçã com 96%), aproximadamente 0.79%.
+Ao comparar o modelo de treino e de validação, é possível identificar baixa diferença de desempenho (ROC AUC de treinamento com 96.48% e validaçã com 95.69%), aproximadamente 0.79%.
 
 ##### Comparação entre os modelos
 
